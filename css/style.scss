@@ -78,6 +78,7 @@ textarea:not([rows]) {
 body {
   margin: 0;
   padding: 0;
+  overscroll-behavior-y: none;
 }
 
 .container-first-page {
@@ -94,7 +95,6 @@ header {
   width: 100vw;
   background-color: #000000;
   padding: 5px 10px 10px;
-  transition: 0.3s;
   text-align: center;
   z-index: 10;
 }
@@ -212,6 +212,27 @@ text-transform: uppercase;
   overflow: hidden;
   }
 
+.container-box h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 550;
+  color: white;
+  }
+
+.first-article {
+  background-image: url(/assets/images/austin-distel-DS1hZ4xzD7M-unsplash.jpg);
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.img-one {
+  height: 120px;
+  width: 80px;
+}
+
+
 // .container-box {
 //   
 //   
@@ -223,11 +244,7 @@ text-transform: uppercase;
 //   justify-content: center;
 // }
 
-.container-box h2 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 550;
-  color: white;
-}
+
 
 
 

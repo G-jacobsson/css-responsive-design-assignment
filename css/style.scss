@@ -84,85 +84,196 @@ body {
   background-image: url('/assets/images/shubham-dhage-1_YIwzXsWvo-unsplash.jpg');
   background-size: cover;
   background-position: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
 header {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 45px;
+  width: 100vw;
   background-color: #000000;
-  padding: 10px 20px;
-  color: white;
-  z-index: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 5px 10px 10px;
+  transition: 0.3s;
+  text-align: center;
 }
 
-ul {
-  list-style: none;
+header a h1 {
+  text-align: center; 
+  font-family: 'Jolly Lodger', sans-serif;
+  font-size: 2.5em;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+a h1 {
+  display: inline;
+  color: inherit;
+  background: none;
   padding: 0;
-  margin: 0;
-}
-
-li {
-  display: none;
-  margin: 0 10px;
 }
 
 a {
   text-decoration: none;
-  color: white;
 }
 
-.logo {
-  font-family: 'Jolly Lodger', sans-serif;
-  font-size: 1.5em;
-  text-align: center;
-  flex-grow: 1;
+.hamburger {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 0;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  pointer-events: none;
 }
 
-main {
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 5px;
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+input {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+}
+
+input:checked + .menu .hamburger span {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
 }
 
-.container-box {
-  background-color: rgba($color: #000000, $alpha: 0.3);
-  text-align: center;
-  max-height: 500px;
-  max-width: 500px;
-  padding: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+input:checked + .menu .hamburger span:nth-child(2) {
+  opacity: 0;
 }
 
-h1 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 685;
-  color: white;
+input:checked + .menu .hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+input:checked + .menu .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  background-color: rgb(235, 255, 0);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  visibility: hidden;
+}
+
+input:checked + .menu nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+ul {
+margin: 0;
+padding: 0;
+gap: 25px;
+list-style: none;
+display: flex;
+flex-direction: column;
+height: 100%;
+justify-content: center;
+align-items: center;
+font-family: 'Jolly Lodger', sans-serif;
+font-size: 3.5em;
+text-transform: uppercase;
 }
 
 
 
-
-// .menu {
+// .navigation {
 //   display: flex;
+//   // justify-content: space-between;
 //   align-items: center;
 // }
 
-// .left-menu {
-//     display: flex;
-//     margin-right: auto;
+
+
+// ul {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   flex-direction: column;
+//   // height: 100%;
+//   justify-content: space-evenly;
+//   text-align: center;
+//   color: black;
+//   font-family: 'Jolly Lodger', sans-serif;
+//   font-size: 1.5em;
 // }
 
-// .right-menu {
-//     display: flex;
-//     justify-content: flex-end;
+// // li {
+// //   // display: none;
+// //   margin: 0 10px;
+// // }
+
+// a {
+//   text-decoration: none;
+//   color: white;
 // }
+
+// .logo {
+//   font-family: 'Jolly Lodger', sans-serif;
+//   font-size: 1.5em;
+//   text-align: center;
+// }
+
+// // main {
+// //   // // position: absolute;
+// //   // top: 50%;
+// //   // left: 50%;
+// //   // transform: translate(-50%, -50%);
+// // }
+
+// .container-box {
+//   background-color: rgba($color: #000000, $alpha: 0.3);
+//   text-align: center;
+//   max-height: 500px;
+//   max-width: 500px;
+//   padding: 5%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// h1 {
+//   font-family: 'Rubik', sans-serif;
+//   font-weight: 685;
+//   color: white;
+// }
+
+
+
+
+// // .menu {
+// //   display: flex;
+// //   align-items: center;
+// // }
+
+// // .left-menu {
+// //     display: flex;
+// //     margin-right: auto;
+// // }
+
+// // .right-menu {
+// //     display: flex;
+// //     justify-content: flex-end;
+// // }

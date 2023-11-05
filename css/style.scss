@@ -71,7 +71,7 @@ textarea:not([rows]) {
 ----------------------------------------------
  */
 
-body {
+body, html {
   margin: 0;
   padding: 0;
   overscroll-behavior-y: none;
@@ -252,7 +252,6 @@ ul {
 
 .first-article {
   background-image: url(/assets/images/austin-distel-DS1hZ4xzD7M-unsplash.jpg);
-  // opacity: 0.8;
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -262,10 +261,10 @@ ul {
   padding-top: 25px;
   padding-left: 30px;
   padding-right: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: flex-start;
   overflow: hidden;
   margin-bottom: 10px;
 }
@@ -287,22 +286,50 @@ ul {
   z-index: 2;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .text-one {
-  text-align: start;
+  // text-align: start;
   color: #ffffff;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.8em;
-  font-weight: 300;
-  line-height: 1.5;
+  font-size: 0.9em;
+  font-weight: lighter;
+  line-height: 1.6;
   margin-bottom: 20px;
   opacity: 0.8;
 }
 
 .img-one {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin-top: 10px;
   border-radius: 8px;
-  height: 240px;
-  width: 160px;
+  height: 280px;
+  width: 180px;
+}
+
+/* 
+----------------------------------------------
+----------------------- MEDIA-QUERIES --------
+----------------------------------------------
+ */
+
+@media screen and (max-width: 425px) {
+  .second-article {
+    display: none;
+  }
+
+  aside {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+  
 }

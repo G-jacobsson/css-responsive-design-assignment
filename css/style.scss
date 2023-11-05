@@ -126,7 +126,7 @@ a {
   position: fixed;
   left: 10px;
   top: 10px;
-  z-index: 2;
+  z-index: 8;
   pointer-events: none;
 }
 
@@ -143,7 +143,7 @@ input {
   position: fixed;
   left: 10px;
   top: 10px;
-  z-index: 1;
+  z-index: 9;
   width: 35px;
   height: 35px;
   opacity: 0;
@@ -183,18 +183,18 @@ input:checked + .menu nav {
 }
 
 ul {
-margin: 0;
-padding: 0;
-gap: 25px;
-list-style: none;
-display: flex;
-flex-direction: column;
-height: 100%;
-justify-content: center;
-align-items: center;
-font-family: 'Jolly Lodger', sans-serif;
-font-size: 3.5em;
-text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Jolly Lodger', sans-serif;
+  font-size: 3.5em;
+  text-transform: uppercase;
 }
 
 .container-box {
@@ -220,16 +220,60 @@ text-transform: uppercase;
 
 .first-article {
   background-image: url(/assets/images/austin-distel-DS1hZ4xzD7M-unsplash.jpg);
-  opacity: 0.8;
+  // opacity: 0.8;
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100vh;
+  position: relative;
+  z-index: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-article::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  pointer-events: none; 
+  z-index: 1;
+}
+
+.first-article > * {
+  position: relative;
+  z-index: 2;
+}
+
+.text-one {
+  text-align: start;
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  opacity: 0.8;
 }
 
 .img-one {
-  height: 120px;
-  width: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  height: 280px;
+  width: 180px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 100%;
 }
 
 

@@ -84,9 +84,10 @@ body, html {
  */
 
 .container-first-page {
-  background-image: url('/assets/images/shubham-dhage-1_YIwzXsWvo-unsplash.webp');
+  background-image: url('../assets/images/shubham-dhage-1_YIwzXsWvo-unsplash.webp');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   min-height: 100%;
@@ -268,7 +269,7 @@ ul {
  */
 
 .first-article {
-  background-image: url('/assets/images/shubham-dhage-1_YIwzXsWvo-unsplash.jpg');
+  background-image: url('../assets/images/shubham-dhage-1_YIwzXsWvo-unsplash.webp');
   background-size: cover;
   background-position: center;
   width: 100vw;

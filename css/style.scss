@@ -141,7 +141,7 @@ a {
   border: 0;
   position: fixed;
   left: 10px;
-  top: 10px;
+  top: 15px;
   z-index: 8;
   pointer-events: none;
 }
@@ -158,7 +158,7 @@ a {
 .check-box {
   position: fixed;
   left: 10px;
-  top: 10px;
+  top: 15px;
   z-index: 9;
   width: 35px;
   height: 35px;
@@ -180,14 +180,17 @@ a {
 
 .check-box:checked + .menu .hamburger span:nth-child(2) {
   opacity: 0;
+  bottom: 15px;
 }
 
 .check-box:checked + .menu .hamburger span:nth-child(1) {
   transform: rotate(45deg);
+  bottom: 15px;
 }
 
 .check-box:checked + .menu .hamburger span:nth-child(3) {
   transform: rotate(-45deg);
+  bottom: 15px;
 }
 
 /* 
@@ -198,6 +201,7 @@ a {
 
 .navigation {
   position: fixed;
+  top: 59px;
   left: 0;
   background-color: rgb(235, 255, 0);
   width: 100vw;
@@ -207,7 +211,8 @@ a {
   visibility: hidden;
 }
 
-.check-box:checked + .menu nav {
+.check-box:checked + .menu .navigation {
+  top: 59px;
   visibility: visible;
   opacity: 1;
 }

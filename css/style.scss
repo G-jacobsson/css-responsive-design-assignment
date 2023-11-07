@@ -89,6 +89,7 @@ body, html {
   background-position: center;
   width: 100vw;
   height: 100vh;
+  min-height: 100%;
 }
 
 /* 
@@ -101,6 +102,7 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
+  height: auto;
   background-color: #000000;
   padding: 5px 10px 10px;
   text-align: center;
@@ -153,7 +155,7 @@ a {
   margin-bottom: 4px;
 }
 
-input {
+.check-box {
   position: fixed;
   left: 10px;
   top: 10px;
@@ -163,20 +165,28 @@ input {
   opacity: 0;
 }
 
-input:checked + .menu .hamburger span {
+.check-box + .menu .hamburger {
+  transition: transform 250ms;
+}
+
+.check-box:hover + .menu .hamburger {
+  transform: translateX(5px);
+}
+
+.check-box:checked + .menu .hamburger span {
   position: absolute;
   transition: all 0.3s ease-in-out;
 }
 
-input:checked + .menu .hamburger span:nth-child(2) {
+.check-box:checked + .menu .hamburger span:nth-child(2) {
   opacity: 0;
 }
 
-input:checked + .menu .hamburger span:nth-child(1) {
+.check-box:checked + .menu .hamburger span:nth-child(1) {
   transform: rotate(45deg);
 }
 
-input:checked + .menu .hamburger span:nth-child(3) {
+.check-box:checked + .menu .hamburger span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
@@ -197,7 +207,7 @@ input:checked + .menu .hamburger span:nth-child(3) {
   visibility: hidden;
 }
 
-input:checked + .menu nav {
+.check-box:checked + .menu nav {
   visibility: visible;
   opacity: 1;
 }
@@ -227,6 +237,8 @@ ul {
   position: absolute;
   top: 40%;
   left: 50%;
+  max-height: 500px;
+  max-width: 500px;
   transform: translate(-50%, -50%);
   background-color: rgba($color: #000000, $alpha: 0.5);
   box-shadow: 0 0 8px 8px rgba($color: #000000, $alpha: 0.5);
@@ -251,11 +263,12 @@ ul {
  */
 
 .first-article {
-  background-image: url(/assets/images/austin-distel-DS1hZ4xzD7M-unsplash.jpg);
+  background-image: url('/assets/images/austin-distel-DS1hZ4xzD7M-unsplash.jpg');
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100vh;
+  min-height: 100%;
   position: relative;
   z-index: 0;
   padding-top: 25px;
@@ -319,7 +332,11 @@ article {
 ----------------------------------------------
  */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
+  .logo-desktop {
+    display: none;
+  }
+
   .second-article {
     display: none;
   }

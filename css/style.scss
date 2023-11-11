@@ -362,10 +362,11 @@ footer {
   align-items: center;
   justify-content: space-around;
   z-index: 6;
+  object-fit: contain;
 }
 
 .cookie-text {
- width: 50%;
+ max-width: 50%;
  font-family: 'Rubik', sans-serif;
  font-weight: 500;
  margin: 20px;
@@ -380,10 +381,12 @@ footer {
   color: white;
   border-radius: 15px;
   padding: 0 50px;
+  border-style: none;
+  margin-right: 20px;
 }
 
 .button-decline {
-  background-color: #342882;
+  background-color: hsl(248, 69, 51);
   font-family: 'Rubik', sans-serif;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -391,6 +394,8 @@ footer {
   color: white;
   border-radius: 15px;
   padding: 0 50px;
+  border-style: none;
+  margin-right: 20px;
 }
 
 /* 
@@ -424,7 +429,7 @@ footer {
   .navigation ul {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    max-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

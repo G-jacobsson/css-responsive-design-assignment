@@ -398,6 +398,11 @@ footer {
   margin-right: 20px;
 }
 
+.cookies div {
+  display: flex;
+  flex-direction: row;
+}
+
 /* 
 ----------------------------------------------
 ----------------------- MEDIA-QUERIES --------
@@ -531,6 +536,10 @@ footer {
 
 @media screen and (min-width: 768px) {
 
+  header {
+    height: 64px;
+  }
+
   .hamburger, .check-box, {
     display: none;
   }
@@ -540,6 +549,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 10px;
   }
   
   .navigation ul {
@@ -584,6 +594,7 @@ footer {
   
   .logo.mobile {
     position: absolute;
+    margin-top: 5px;
   }
 
   .container-box h2 {

@@ -429,15 +429,26 @@ footer {
   .navigation ul {
     margin: 0;
     padding: 0;
-    max-height: 85vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     text-align: center;
     list-style: none;
     font-family: 'Jolly Lodger', sans-serif;
     font-size: 3.5rem;
     text-transform: uppercase;
+  }
+
+  .navigation ul div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation ul li {
+    margin-right: 0;
+    margin-bottom: 50px;
   }
 
   .desktop {
@@ -520,7 +531,7 @@ footer {
 
 @media screen and (min-width: 768px) {
 
-  .hamburger, .check-box, .mobile {
+  .hamburger, .check-box, {
     display: none;
   }
 
@@ -533,12 +544,10 @@ footer {
   
   .navigation ul {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0;
-    position: relative;
-    flex-grow: 1;
     }
   
   .navigation li {
@@ -557,18 +566,24 @@ footer {
 
     color: white; 
   }
-  
-  .logo.desktop {
-    flex-grow: 1;
-    text-align: center;
+
+  header .left, header .right {
+    flex: 1;
+    display: flex;
+  }
+
+  header .left {
+    justify-content: flex-start;
+    margin-left: 10%;
+  }
+
+  header .right {
+    justify-content: flex-end;
+    margin-right: 10%;
   }
   
-  .navigation li:nth-child(1), .navigation li:nth-child(2) {
-    margin-right: auto;
-  }
-  
-  .navigation li:nth-child(4), .navigation li:nth-child(5) {
-    margin-left: auto;
+  .logo.mobile {
+    position: absolute;
   }
 
   .container-box h2 {
@@ -598,6 +613,7 @@ footer {
     flex-direction: column;
     max-height: 100%;
     height: 100vh;
+    max-width: fit-content;
   }
   
   .first-article, .second-article {
@@ -613,9 +629,8 @@ footer {
   }
   
   .first-article img, .second-article img {
-    width: 50%;
-    max-height: 100%;
-    height: 220px;
+    max-width: 30%;
+    max-height: 85%;
     margin: 25px;
     border-radius: 8px;
     object-fit: cover;
@@ -627,9 +642,11 @@ footer {
   }
 
   span {
+    max-width: 50rem;
     padding: 25px;
     color: white;
     font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
   }
   
 

@@ -175,6 +175,10 @@ header {
   bottom: 15px;
 }
 
+input[type="checkbox"]:focus + .menu .hamburger {
+  outline: 2px solid white; /* Example focus style */
+}
+
 /* 
 ----------------------------------------------
 ----------------------- NAVIGATION -----------

@@ -288,6 +288,10 @@ footer {
   margin-right: 20px;
 }
 
+.button-accept:active, .button-decline:active {
+  transform: scale(0.98);
+}
+
 .cookies div {
   display: flex;
   flex-direction: row;

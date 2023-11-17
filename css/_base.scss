@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  
+  /* 
+  ----------------------------------------------
+  ----------------------- HEADER ---------------
+  ----------------------------------------------
+   */
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #000000;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .menu .logo {
+    text-decoration: none;
+  }
+  
+  .menu .logo h1 {
+    font-family: 'Jolly Lodger', sans-serif;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: #ffffff;
+    display: inline;
+    background: none;
+    padding: 0;
+  }
+  
+  /* 
+  ----------------------------------------------
+  ----------------------- HAMBURGER MENU -------
+  ----------------------------------------------
+   */
+  
+  .hamburger {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 0;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    z-index: 8;
+    pointer-events: none;
+  }
+  
+  .hamburger .bar {
+    display: block;
+    width: 28px;
+    height: 5px;
+    background-color: white;
+    border-radius: 6px;
+    margin-bottom: 4px;
+  }
+  
+  .check-box {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 9;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+  }
+  
+  .check-box + .menu .hamburger {
+    transition: transform 250ms;
+  }
+  
+  .check-box:hover + .menu .hamburger {
+    transform: translateX(5px);
+  }
+  
+  .check-box:checked + .menu .hamburger .bar {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .check-box:checked + .menu .hamburger .bar:nth-child(2) {
+    opacity: 0;
+    bottom: 15px;
+  }
+  
+  .check-box:checked + .menu .hamburger .bar:nth-child(1) {
+    transform: rotate(45deg);
+    bottom: 15px;
+  }
+  
+  .check-box:checked + .menu .hamburger .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 15px;
+  }
+  
+  input[type="checkbox"]:focus-visible + .menu .hamburger,
+   {
+    outline: 2px solid white; /* Example focus style */
+  }
+  
+  /* 
+  ----------------------------------------------
+  ----------------------- NAVIGATION -----------
+  ----------------------------------------------
+   */
+  
+  .navigation {
+    display: flex;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+  }
+  
+  .navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 
+  ----------------------------------------------
+  ----------------------- TEXT-BOX -------------
+  ----------------------------------------------
+   */
+  .container-box-wrapper {
+    background-image: url('../assets/images/shubham-dhage-1_YIwzXsWvo-unsplash.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-box {
+    position: absolute;
+    width: min-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 15px 35px;
+    display: flex;
+    }
+  
+  .container-box h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 550;
+    color: white;
+    font-size: 1.7rem;
+    margin-left: 25px;
+    margin-right: 25px;
+    }
+  
+  /* 
+  ----------------------------------------------
+  ----------------------- SECOND PAGE ----------
+  ----------------------------------------------
+   */
+  
+  footer {
+    position: sticky;
+    background-color: rgb(235, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 6;
+    object-fit: contain;
+  }
+  
+  .cookie-text {
+   max-width: 50%;
+   font-family: 'Rubik', sans-serif;
+   font-weight: 500;
+   margin: 20px;
+  }
+  
+  .button-accept {
+    background-color: #751342;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 650;
+    color: white;
+    border-radius: 15px;
+    padding: 0 50px;
+    border-style: none;
+    margin-right: 20px;
+  }
+  
+  .button-decline {
+    background-color: hsl(248, 69%, 51%);
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 650;
+    color: white;
+    border-radius: 15px;
+    padding: 0 50px;
+    border-style: none;
+    margin-right: 20px;
+  }
+  
+  .button-accept:active, .button-decline:active {
+    transform: scale(0.98);
+  }
+  
+  .cookies div {
+    display: flex;
+    flex-direction: row;
+  }
+  

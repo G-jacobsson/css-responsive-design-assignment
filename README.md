@@ -1,2 +1,2 @@
-#### CSS Responsive excercise in th blockchain developer program @ Medieinstitutet
-- Replicate a design with best practices CSS/SCSS and HTML with responsiveness
+#### CSS Responsive excercise in the blockchain developer program @ Medieinstitutet
+- Replicate a design with best practice CSS/SCSS and HTML with responsiveness
